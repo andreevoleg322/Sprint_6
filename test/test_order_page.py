@@ -23,9 +23,9 @@ class TestOrderPage:
     def test_create_order(self, driver, locator, order_data, rent_day):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
-        main_page.click_to_element(MainPageLocators.BUTTON_COOKIE_ACCEPT_LOCATOR)
+        main_page.click_cookie_accept()
         main_page.click_to_order_button(locator)
         order_page.set_order_form_1()
         order_page.set_order_form_2(rent_day)
         order_page.order_confirmation()
-        assert 'Заказ оформлен' in main_page.check_order(OrderPageLocators.ORDER_COMPLETE_LOCATOR)
+        assert 'Заказ оформлен' in main_page.check_order()

@@ -14,7 +14,6 @@ class OrderPageLocators:
     NEXT_BUTTON = By.XPATH, '//button[text()="Далее"]' #кнопка "Далее"
 
     #локаторы для второй формы
-    #ORDER_CONTENT_HEADER = By.XPATH, '//div[contains(@class, "Order_Header")]'
     RENT_DATE_INPUT = By.XPATH, '//input[@placeholder="* Когда привезти самокат"]' #строка "Когда привезти самокат
     TODAY_CALENDAR_LOCATOR= By.XPATH, "//div[contains(@class, 'react-datepicker__day--today')]"  # сегодняшний день в выпадающем календаре
     RENT_PERIOD_DROPDOWN = By.XPATH, "//div[text()='* Срок аренды']" #выпадающий список "Срок аренды"

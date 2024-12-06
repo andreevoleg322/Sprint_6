@@ -1,6 +1,6 @@
 import allure
 from conftest import driver
-from data import Urls
+from data import Urls, HeadingTextMainPage
 from pages.main_page import MainPage
 
 
@@ -12,10 +12,7 @@ class TestHeaderLogoClick:
         main_page = MainPage(driver)
         main_page.click_to_button_order_up()
         main_page.click_to_scooter_logo()
-        assert ('Самокат'
-                '\nна пару дней'
-                '\nПривезём его прямо к вашей двери,'
-                '\nа когда накатаетесь — заберём') in main_page.get_heading_text()
+        assert HeadingTextMainPage.heading_text in main_page.get_heading_text()
 
     @allure.title('Проверка редиректа на страницу Дзена после нажатия на логотип Яндекса')
     #тест редиректа на страницу Дзена после нажатия на логотип Яндекса
