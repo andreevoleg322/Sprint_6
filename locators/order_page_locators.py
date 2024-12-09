@@ -26,3 +26,4 @@ class OrderPageLocators:
     ORDER_YES_BUTTON = By.XPATH, "//button[contains(text(), 'Да')]" #кнопка "Да" в всплывающем окне подтверждения заказа
     ORDER_COMPLETE_LOCATOR = By.XPATH, "//div[text()='Заказ оформлен']"  #надпись "Заказ оформлен"
     BUTTON_CHECK_STATUS_ORDER = By.XPATH, "//button[text()='Посмотреть статус']"  #кнопка "Посмотреть статус"
+    EMPTY_PAGE_CLICK = By.XPATH, '//body'  # для клика в пустое место на странице

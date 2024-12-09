@@ -13,7 +13,6 @@ class MainPageLocators:
 
     #локаторы общего назначения
     BUTTON_COOKIE_ACCEPT_LOCATOR = By.XPATH, "//button[text()='да все привыкли']"  # кнопка куков
-    EMPTY_PAGE = By.XPATH, '//body'  # для клика в пустое место на странице
 
     #локаторы для работы с логотипами
     LOGO_SCOOTER = By.XPATH, '//a[contains(@class, "Header_LogoScooter")]' #логотип самоката

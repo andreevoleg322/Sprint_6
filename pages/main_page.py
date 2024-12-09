@@ -1,14 +1,10 @@
 import allure
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
-from locators.order_page_locators import OrderPageLocators
 from data import Urls
 
 
 class MainPage(BasePage):
-
-    def __init__(self, driver):
-        super().__init__(driver)
 
     @allure.step("Получение текста ответа в разделе FAQ")
     def get_answer_text(self, num):
@@ -30,21 +26,9 @@ class MainPage(BasePage):
     def get_url_dzen(self):
         return self.get_current_url()
 
-    @allure.step("Проверка текста в всплывающем окне успешного заказа")
-    def check_order(self):
-        return self.get_text_from_element(OrderPageLocators.ORDER_COMPLETE_LOCATOR)
-
-    @allure.step("Клик на кнопку 'заказать'")
-    def click_to_order_button(self, locator):
-        self.click_to_element(locator)
-
-    @allure.step("Rлик на кнопку принятия куков")
+    @allure.step("Клик на кнопку принятия куков")
     def click_cookie_accept(self):
         self.click_to_element(MainPageLocators.BUTTON_COOKIE_ACCEPT_LOCATOR)
-
-    @allure.step("Клик в пустое место на странице")
-    def click_to_empty_place_on_page(self, locator):
-        self.click_to_element(locator)
 
     @allure.step("Клик на логотип самоката")
     def click_to_scooter_logo(self):

@@ -40,10 +40,6 @@ class BasePage:
     def get_current_url(self):
         return self.driver.current_url
 
-    @allure.step("Клик в пустое место на странице")
-    def click_to_empty_place_on_page(self, locator):
-        self.click_to_element(locator)
-
     @allure.step("Переключение вкладки")
     def switch_tab(self):
         return self.driver.switch_to.window(self.driver.window_handles[-1])
